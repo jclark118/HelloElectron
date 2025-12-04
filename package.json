@@ -1,0 +1,34 @@
+{
+  "name": "helloworld",
+  "version": "1.0.0",
+  "description": "the most basic electron app possible",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "test",
+    "build:mac": "electron-builder --mac --arm64",
+    "build:linux": "export FPM_DEBUG=true && export LC_ALL=C && electron-builder --linux rpm --x64"
+  },
+  "author": {
+    "name": "Test User",
+    "email": "test@github.com"
+  },
+  "homepage": "github.com",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "39.2.5",
+    "electron-builder": "26.0.12"
+  },
+  "build": {
+    "appId": "com.example.helloworld",
+    "productName": "HelloWorld",
+    "mac": {
+      "target": "dmg",
+      "artifactName": "${productName}-${version}-arm64.${ext}"
+    },
+    "linux": {
+      "target": "rpm",
+      "artifactName": "${productName}-${version}-x64.${ext}"
+    }
+  }
+}
