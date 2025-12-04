@@ -17,7 +17,7 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "39.2.5",
-    "electron-builder": "26.0.12"
+    "electron-builder": "26.3.4"
   },
   "build": {
     "appId": "com.example.helloworld",
