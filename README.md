@@ -1,6 +1,6 @@
 # HelloElectron
 
-A basic hello world electron app.  This project is used to show the current issue with fpm failing during the packaging process when the jre is included in the build. The goal is to produce an rpm file for production.
+A basic hello world electron app.  This project is used to show the current issue with fpm failing during the packaging process when the jre is included in the build. The failure will only happen when including the jre, and using the prepackaged binary included with electron-builder, as using my own system installed version of fpm will also work.  The goal is to produce an rpm file for production.
 
 These build options will highlight the issue:
 
