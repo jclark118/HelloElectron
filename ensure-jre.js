@@ -121,7 +121,7 @@ async function downloadJre() {
         for (const file of files) {
             const filePath = path.join(destPath, file);
             if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
-                fs.chmodSync(filePath, 0o755);
+                fs.chmodSync(filePath, 0o644);
             }
         }
         console.log('Permissions set.');
