@@ -10,6 +10,7 @@
     "build:mac": "electron-builder --mac --arm64",
     "build:linux": "npm run ensure-jre && export FPM_DEBUG=true && electron-builder --linux rpm --x64",
     "build:linux:nojre": "npm run clean && electron-builder --linux rpm --x64 -c.asar=false -c.asarUnpack=",
+    "build:linux:systemfpm": "npm run ensure-jre && export CUSTOM_FPM_PATH=\"$PWD/fpm-wrapper.sh\" && export FPM_DEBUG=true && electron-builder --linux rpm --x64",
     "clean": "rm -rf jre dist"
   },
   "author": {
