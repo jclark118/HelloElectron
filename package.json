@@ -8,7 +8,8 @@
     "test": "test",
     "ensure-jre": "node ensure-jre.js",
     "build:mac": "electron-builder --mac --arm64",
-    "build:linux": "npm run ensure-jre && export LC_ALL=C && electron-builder --linux rpm --x64",
+    "build:linux": "npm run ensure-jre && export FPM_DEBUG=true && electron-builder --linux rpm --x64",
+    "build:linux:nojre": "npm run clean && electron-builder --linux rpm --x64 -c.asar=false -c.asarUnpack=",
     "clean": "rm -rf jre dist"
   },
   "author": {
